@@ -1,0 +1,213 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+    max-width: 600px;
+    background-image: url('../Imagenes/Fondo1.jpg');
+    background-size: cover;
+    color: white;
+    padding: 20px 10px 80px 10px;
+}
+
+h2 {
+    font-size: 44px;
+}
+
+h2,
+p,
+h3.nuestrosProductos {
+    margin-top: 30px;
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    margin-top: 30px;
+}
+
+span {
+    font-size: 30px;
+}
+
+.icono {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background-color: #d03b40ed;
+    height: 30px;
+    width: 30px
+}
+
+ul {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    display: none;
+}
+
+ul li {
+    border: 1px solid black;
+    background-color: #d03b40ed;
+    padding: 10px;
+}
+
+.secondHeader {
+    max-width: 620px;
+    margin: 0;
+}
+
+.secondHeader h2 {
+    font-size: 28ps;
+}
+
+.secondHeaderA {
+    background-color: #d03b40;
+    padding: 20px 10px;
+}
+
+.secondHeaderB {
+    background-color: #ded6c0;
+    padding: 20px 10px;
+    color: brown;
+}
+
+.present2 {
+    max-width: 600px;
+    background-image: url('../Imagenes/Fondo2.jpg');
+    background-size: cover;
+    color: white;
+    padding: 20px 10px 60px 10px;
+}
+
+h3.nuestrosProductos {
+    border: 1px solid white;
+    margin: 10% 20%;
+}
+
+.pan {
+    max-width: 600px;
+    background-color: #f5f0ed;
+    padding: 20px 10px 40px 10px;
+}
+
+.pan p {
+    text-align: left;
+}
+
+.pan h3 {
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.pan img {
+    margin-left: 33.33%;
+    width: 100px;
+    height: 100px;
+}
+
+.contacto {
+    font-size: 24px;
+}
+
+.footer {
+    max-width: 600px;
+    background-color: black;
+    color: white;
+    padding: 40px 10px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer span {
+    display: none;
+}
+
+.disappear {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    display: block;
+    list-style-type: none;
+}
+
+@media screen and (min-width: 601px) {
+    .header,
+    .secondHeader {
+        max-width: 100%;
+    }
+    .icono {
+        display: none;
+    }
+    ul {
+        display: block;
+        list-style-type: none;
+    }
+    ul li {
+        display: inline;
+        border: none;
+        background-color: inherit;
+    }
+    .secondHeaderA {
+        box-sizing: border-box;
+        width: 50%;
+        top: 0;
+        max-height: 100%;
+        float: left;
+        overflow: hidden;
+    }
+    .secondHeaderB {
+        box-sizing: border-box;
+        width: 50%;
+        margin-left: -4px;
+        top: 0;
+        max-height: 100%;
+        float: left;
+        overflow: hidden;
+    }
+    .encab {
+        max-width: 30%;
+        margin: auto;
+    }
+    .secondHeader h2,
+    .secondHeader p {
+        max-width: 50%;
+        margin: auto;
+    }
+    .present2 {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    .present2 h3,
+    .present2 p {
+        max-width: 25%;
+        margin: auto;
+        margin-top: 4%;
+        font-size: 25px;
+    }
+    .pan {
+        box-sizing: border-box;
+        float: left;
+        max-width: 50%;
+        max-height: 100%;
+        overflow: hidden;
+    }
+    .pan div {
+        float: left;
+    }
+    .pan img {
+        margin-left: 0;
+    }
+    .panPrincipal {
+        height: auto;
+        overflow: hidden;
+    }
+}
