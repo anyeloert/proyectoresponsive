@@ -5,27 +5,71 @@ body {
     padding: 0;
 }
 
+.container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .header {
-    position: relative;
-    max-width: 600px;
     background-image: url('../Imagenes/Fondo1.jpg');
     background-size: cover;
     color: white;
     padding: 20px 10px 80px 10px;
 }
 
-h2 {
+.logomenu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logomenu img {
+    position: relative;
+    height: 42px;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu div {
+    align-self: flex-end;
+}
+
+.menu span {
+    background-color: #d03b40ed;
+    height: 30px;
+    width: 30px
+}
+
+ul {
+    display: none;
+}
+
+ul li {
+    border: 1px solid black;
+    background-color: #d03b40ed;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.header h2 {
     font-size: 44px;
 }
 
-h2,
-p,
-h3.nuestrosProductos {
+.header h2,
+.header p {
     margin-top: 30px;
     text-align: center;
 }
 
-hr {
+.header hr {
     margin: auto;
     margin-top: 30px;
 }
@@ -34,63 +78,63 @@ span {
     font-size: 30px;
 }
 
-.icono {
-    position: absolute;
-    right: 10px;
-    top: 20px;
-    background-color: #d03b40ed;
-    height: 30px;
-    width: 30px
-}
-
-ul {
-    position: absolute;
-    right: 10px;
-    top: 50px;
-    display: none;
-}
-
-ul li {
-    border: 1px solid black;
-    background-color: #d03b40ed;
-    padding: 10px;
-}
-
-.secondHeader {
-    max-width: 620px;
-    margin: 0;
-}
-
-.secondHeader h2 {
-    font-size: 28ps;
+.disappear {
+    right: 0;
+    display: block;
+    list-style-type: none;
 }
 
 .secondHeaderA {
     background-color: #d03b40;
+}
+
+.secondHeader {
     padding: 20px 10px;
+    text-align: center;
 }
 
 .secondHeaderB {
     background-color: #ded6c0;
-    padding: 20px 10px;
     color: brown;
 }
 
+.secondHeader h2,
+.secondHeader p {
+    width: 50%;
+    margin: auto;
+}
+
 .present2 {
-    max-width: 600px;
+    display: flex;
+    flex-direction: column;
     background-image: url('../Imagenes/Fondo2.jpg');
     background-size: cover;
     color: white;
-    padding: 20px 10px 60px 10px;
+    padding: 40px 0;
 }
 
-h3.nuestrosProductos {
+.nuestrosProductos {
     border: 1px solid white;
-    margin: 10% 20%;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    width: fit-content;
+    padding: 5px 5px;
+}
+
+.present2 h2,
+.present2 p {
+    text-align: center;
+    margin: 20px auto 0 auto;
+    width: 55%;
+}
+
+.present2 hr {
+    text-align: center;
+    margin: 20px auto 0 auto;
+    width: 10%;
 }
 
 .pan {
-    max-width: 600px;
     background-color: #f5f0ed;
     padding: 20px 10px 40px 10px;
 }
@@ -117,7 +161,6 @@ h3.nuestrosProductos {
 }
 
 .footer {
-    max-width: 600px;
     background-color: black;
     color: white;
     padding: 40px 10px;
@@ -131,17 +174,10 @@ h3.nuestrosProductos {
     display: none;
 }
 
-.disappear {
-    position: absolute;
-    right: 10px;
-    top: 50px;
-    display: block;
-    list-style-type: none;
-}
-
-@media screen and (min-width: 601px) {
-    .header,
-    .secondHeader {
+@media screen and (min-width: 801px) {
+    .container {
+        display: flex;
+        flex-flow: row wrap;
         max-width: 100%;
     }
     .icono {
@@ -156,26 +192,33 @@ h3.nuestrosProductos {
         border: none;
         background-color: inherit;
     }
+    .header h2,
+    .header p,
+    .header hr {
+        width: 30%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    .second {
+        display: flex;
+        flex-direction: row;
+    }
+    .secondHeader {
+        width: 100%;
+    }
     .secondHeaderA {
         box-sizing: border-box;
         width: 50%;
-        top: 0;
-        max-height: 100%;
-        float: left;
+        height: 100%;
+        display: inline-block;
         overflow: hidden;
     }
     .secondHeaderB {
         box-sizing: border-box;
         width: 50%;
-        margin-left: -4px;
-        top: 0;
-        max-height: 100%;
-        float: left;
+        height: 100%;
+        display: inline-block;
         overflow: hidden;
-    }
-    .encab {
-        max-width: 30%;
-        margin: auto;
     }
     .secondHeader h2,
     .secondHeader p {
@@ -183,31 +226,35 @@ h3.nuestrosProductos {
         margin: auto;
     }
     .present2 {
-        box-sizing: border-box;
-        max-width: 100%;
+        width: 100%;
     }
-    .present2 h3,
     .present2 p {
-        max-width: 25%;
-        margin: auto;
-        margin-top: 4%;
-        font-size: 25px;
+        width: 25%;
+    }
+    .present2 hr {
+        width: 20%;
     }
     .pan {
+        display: flex;
+        flex-direction: row;
         box-sizing: border-box;
-        float: left;
-        max-width: 50%;
-        max-height: 100%;
-        overflow: hidden;
+        width: 50%;
     }
+    .pan img,
     .pan div {
-        float: left;
+        margin: 0 5px;
     }
-    .pan img {
-        margin-left: 0;
+    .second {
+        display: flex;
+        flex-direction: row;
     }
-    .panPrincipal {
-        height: auto;
-        overflow: hidden;
+    .footer {
+        width: 100%;
+    }
+    .footer br {
+        display: none;
+    }
+    .footer span {
+        display: inline;
     }
 }
